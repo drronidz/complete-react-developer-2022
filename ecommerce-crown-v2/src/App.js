@@ -1,5 +1,8 @@
 import React from "react";
 
+// Styles
+import './categories.styles.scss'
+
 const App = () => {
     const categories = [
         {id: 1, title: 'Hats'},
@@ -10,10 +13,9 @@ const App = () => {
     ]
     return (
         <div className="categories-container">
-            {categories.map(({title}) => (
-                <div className="category-container">
-                    {/* <img /> */}
-                    <div className="background-image"/>
+            {categories.map(({id, title}) => (
+                <div key={id} className="category-container">
+                    <div  className="background-image"/>
                     <div className="category-body-container">
                         <h2>{title}</h2>
                         <p>Shop Now</p>
